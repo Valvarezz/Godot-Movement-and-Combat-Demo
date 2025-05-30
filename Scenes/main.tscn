@@ -1445,6 +1445,7 @@ tile_set = SubResource("TileSet_jjvhh")
 position = Vector2(41, -4)
 script = ExtResource("4_jjvhh")
 SPEED = 300
+playerhealth = 100
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 

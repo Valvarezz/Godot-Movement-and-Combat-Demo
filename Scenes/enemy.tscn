@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://kqd5irqj6hbh"]
+[gd_scene load_steps=19 format=3 uid="uid://kqd5irqj6hbh"]
 
 [ext_resource type="Texture2D" uid="uid://cytx7wtkjhhln" path="res://Assets/Tiny Swords (Update 010)/Factions/Goblins/Troops/Barrel/Red/Barrel_Red.png" id="1_hghv2"]
 
@@ -10,9 +10,29 @@ region = Rect2(0, 640, 128, 128)
 atlas = ExtResource("1_hghv2")
 region = Rect2(128, 640, 128, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uf12"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(0, 640, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_po0sg"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(128, 640, 128, 128)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_287tu"]
 atlas = ExtResource("1_hghv2")
-region = Rect2(256, 640, 128, 128)
+region = Rect2(0, 640, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haro7"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(128, 640, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hghv2"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_auwsv"]
+atlas = ExtResource("1_hghv2")
+region = Rect2(256, 128, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0830c"]
 atlas = ExtResource("1_hghv2")
@@ -36,11 +56,31 @@ animations = [{
 "texture": SubResource("AtlasTexture_afpow")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_8uf12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_po0sg")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_287tu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haro7")
+}],
+"loop": false,
+"name": &"blowup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hghv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_auwsv")
 }],
 "loop": false,
 "name": &"hit",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -54,14 +94,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8uf12"]
-radius = 17.1172
+radius = 28.0179
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_po0sg"]
-radius = 30.0167
+radius = 19.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hghv2"]
 bg_color = Color(0, 0, 0, 1)
@@ -69,19 +109,22 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1f0kj"]
 bg_color = Color(0.6, 0, 0, 1)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_hghv2"]
+radius = 115.07
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_auwsv")
-animation = &"hit"
+animation = &"blowup"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_8uf12")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="enemyhitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemyhitbox"]
 position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_po0sg")
 
@@ -94,3 +137,9 @@ theme_override_styles/background = SubResource("StyleBoxFlat_hghv2")
 theme_override_styles/fill = SubResource("StyleBoxFlat_1f0kj")
 value = 100.0
 show_percentage = false
+
+[node name="blowuparea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blowuparea"]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_hghv2")

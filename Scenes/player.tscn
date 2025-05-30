@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ci0vrq6j5qp5p"]
+[gd_scene load_steps=39 format=3 uid="uid://ci0vrq6j5qp5p"]
 
 [ext_resource type="Texture2D" uid="uid://c1fubejin1een" path="res://Assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_v0iea"]
 
@@ -53,6 +53,54 @@ region = Rect2(576, 384, 192, 192)
 [sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
 atlas = ExtResource("1_v0iea")
 region = Rect2(960, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1odr"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(0, 768, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gysh"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(192, 768, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfarp"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(384, 768, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6uwr"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(576, 768, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83xs0"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(768, 768, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypfnu"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(960, 768, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0iea"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(0, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6n3p"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(192, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olqyp"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(384, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpjfl"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(576, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bi64h"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(768, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ijsl"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(960, 576, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8erm5"]
 atlas = ExtResource("1_v0iea")
@@ -123,9 +171,55 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3smsa")
 }],
-"loop": true,
-"name": &"attack",
-"speed": 5.0
+"loop": false,
+"name": &"attackone",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1odr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gysh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfarp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6uwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83xs0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypfnu")
+}],
+"loop": false,
+"name": &"attackthree",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0iea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6n3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olqyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpjfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bi64h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ijsl")
+}],
+"loop": false,
+"name": &"attacktwo",
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -148,7 +242,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -171,23 +265,30 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_olqyp"]
 radius = 55.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_wpjfl"]
-radius = 15.0333
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0iea"]
+radius = 21.0
+height = 62.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v0iea"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0iea"]
+bg_color = Color(0.6, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvnsp"]
+bg_color = Color(0, 1, 0, 1)
 
 [node name="Player" type="CharacterBody2D"]
 script = SubResource("GDScript_v0iea")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l6n3p")
-animation = &"attack"
+animation = &"idle"
 
 [node name="AttackArea" type="Area2D" parent="."]
 visible = false
@@ -196,11 +297,21 @@ visible = false
 position = Vector2(34, -1)
 shape = SubResource("CircleShape2D_olqyp")
 
-[node name="hitbox" type="Area2D" parent="."]
+[node name="playerhitbox" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(-2, 4)
-shape = SubResource("CircleShape2D_wpjfl")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerhitbox"]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_v0iea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_v0iea")
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="."]
+offset_left = -49.0
+offset_top = -74.0
+offset_right = 38.0
+offset_bottom = -64.0
+theme_override_styles/background = SubResource("StyleBoxFlat_v0iea")
+theme_override_styles/fill = SubResource("StyleBoxFlat_cvnsp")
+value = 100.0
+show_percentage = false
