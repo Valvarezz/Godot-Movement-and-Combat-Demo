@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://d1stqkguynjde"]
+
+[ext_resource type="Script" uid="uid://djyio1vuvwb10" path="res://Scripts/melanie.gd" id="1_12r8v"]
+[ext_resource type="Texture2D" uid="uid://d4f1wh0gkv335" path="res://Assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Pawn/Blue/Pawn_Blue.png" id="1_m8hff"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12r8v"]
+atlas = ExtResource("1_m8hff")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfvu3"]
+atlas = ExtResource("1_m8hff")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_po1gh"]
+atlas = ExtResource("1_m8hff")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7ekg"]
+atlas = ExtResource("1_m8hff")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijx6k"]
+atlas = ExtResource("1_m8hff")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uusja"]
+atlas = ExtResource("1_m8hff")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dd8nk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12r8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfvu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_po1gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7ekg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijx6k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uusja")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r7a43"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+script = ExtResource("1_12r8v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dd8nk")
+animation = &"idle"
+frame_progress = 0.257359
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_r7a43")

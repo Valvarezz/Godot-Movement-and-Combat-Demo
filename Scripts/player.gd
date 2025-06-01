@@ -3,11 +3,12 @@ extends CharacterBody2D
 @export var SPEED: int = 300
 @export var playerhealth: int = 100
 var attack_damage: int = 50
+var powered_up: bool = false  # Güç alındı mı kontrolü için
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_area: Area2D = $AttackArea
-@onready var enemyhitbox: Area2D = $enemyhitbox
 @onready var player_health_bar: ProgressBar = $PlayerHealthBar
+@onready var actionable_finder: Area2D = $Direction/ActionableFinder
 
 var is_attacking: bool = false
 var direction: Vector2 = Vector2.ZERO
@@ -21,13 +22,29 @@ func _ready() -> void:
 	attack_area.monitorable = false
 	animated_sprite.animation_finished.connect(_on_attack_animation_finished)
 
+func _unhandled_input(_event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+		return
+
 func _physics_process(delta: float) -> void:
 	handle_attack()
 	update_combo_timer(delta)
-
+	check_power_up()
 	if not is_attacking:
 		handle_movement()
 		update_animation()
+
+# ----------------------
+# 🗡️ Get Power from Melanie
+# ----------------------
+func check_power_up() -> void:
+	if State.sword_oil == "has" and not powered_up:
+		attack_damage = 100
+		powered_up = true
+		print("Power up, new power: ", attack_damage)
 
 # ----------------------
 # 🗡️ Attack

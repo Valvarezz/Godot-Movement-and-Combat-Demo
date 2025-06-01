@@ -1,0 +1,18 @@
+~ start
+
+Melanie: Hi, Jack!
+if State.sword_oil == "" and State.enemy_alive == "alive":
+	Jack: Hi, Melanie
+	Melanie: There is a enemy over there can u handle him?
+	- Yes, Sure
+		set State.sword_oil = "has"
+		Melanie: Apply this oil to your sword. It will give you more power.
+		Oil applied your sword. Your sword is more sharp now.
+	- No, Sorry
+elif State.sword_oil == "has" and State.enemy_alive == "alive":
+	Melanie: I gave you the oil go, he is still alive please kill him.
+elif State.sword_oil == "" and State.enemy_alive == "dead":
+	Melanie: Are u ok? That was a though fight.
+else:
+	Melanie: Oh! Finally thank you for killing him.
+=> END 

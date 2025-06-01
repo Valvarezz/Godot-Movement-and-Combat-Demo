@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://ci0vrq6j5qp5p"]
+[gd_scene load_steps=40 format=3 uid="uid://ci0vrq6j5qp5p"]
 
 [ext_resource type="Texture2D" uid="uid://c1fubejin1een" path="res://Assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_v0iea"]
 
@@ -272,8 +272,8 @@ animations = [{
 radius = 55.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v0iea"]
-radius = 21.0
-height = 62.0
+radius = 16.0
+height = 58.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v0iea"]
 
@@ -283,12 +283,15 @@ bg_color = Color(0.6, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cvnsp"]
 bg_color = Color(0, 1, 0, 1)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
+radius = 26.0192
+
 [node name="Player" type="CharacterBody2D"]
 script = SubResource("GDScript_v0iea")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l6n3p")
-animation = &"idle"
+animation = &"attackone"
 
 [node name="AttackArea" type="Area2D" parent="."]
 visible = false
@@ -304,6 +307,7 @@ position = Vector2(0, 4)
 shape = SubResource("CapsuleShape2D_v0iea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_v0iea")
 
 [node name="PlayerHealthBar" type="ProgressBar" parent="."]
@@ -315,3 +319,13 @@ theme_override_styles/background = SubResource("StyleBoxFlat_v0iea")
 theme_override_styles/fill = SubResource("StyleBoxFlat_cvnsp")
 value = 100.0
 show_percentage = false
+
+[node name="Direction" type="Marker2D" parent="."]
+
+[node name="ActionableFinder" type="Area2D" parent="Direction"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+position = Vector2(36, 0)
+shape = SubResource("CircleShape2D_cvnsp")

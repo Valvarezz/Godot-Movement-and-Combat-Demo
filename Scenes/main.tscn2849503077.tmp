@@ -1,9 +1,8 @@
-[gd_scene load_steps=18 format=4 uid="uid://depbrutld0sag"]
+[gd_scene load_steps=16 format=4 uid="uid://depbrutld0sag"]
 
 [ext_resource type="Texture2D" uid="uid://cwu0ldhj3dsor" path="res://Assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Flat.png" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://caeqfnfir2c02" path="res://Assets/Tiny Swords (Update 010)/Terrain/Ground/Tilemap_Elevation.png" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://ci0vrq6j5qp5p" path="res://Scenes/player.tscn" id="3_8gbba"]
-[ext_resource type="Texture2D" uid="uid://dg3rf41k5suk8" path="res://Assets/Tiny Swords (Update 010)/Factions/Knights/Buildings/House/House_Blue.png" id="3_hptm8"]
 [ext_resource type="Script" uid="uid://duv5b71o8bat5" path="res://Scripts/player.gd" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://kqd5irqj6hbh" path="res://Scenes/enemy.tscn" id="5_21xkr"]
 [ext_resource type="Script" uid="uid://h3ushqwscatc" path="res://Scripts/enemy.gd" id="6_6bp64"]
@@ -1430,113 +1429,14 @@ texture = ExtResource("2_bo1nx")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_8gbba")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d1ilt"]
-texture = ExtResource("3_hptm8")
-3:1/0 = 0
-3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:1/0 = 0
-4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:2/0 = 0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-1:3/0 = 0
-1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:3/0 = 0
-2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:3/0 = 0
-6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:4/0 = 0
-1:4/0 = 0
-1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:4/0 = 0
-2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:4/0 = 0
-6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:5/0 = 0
-2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:5/0 = 0
-6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:6/0 = 0
-2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-5:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:6/0 = 0
-6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:7/0 = 0
-2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:7/0 = 0
-6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-6:8/0 = 0
-6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-2:9/0 = 0
-2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-3:9/0 = 0
-3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-4:9/0 = 0
-4:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-5:9/0 = 0
-5:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-6:9/0 = 0
-6:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-7:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
-7:11/0 = 0
+[sub_resource type="GDScript" id="GDScript_ynf5e"]
+script/source = "extends StaticBody2D        # Melanie sahnesinin kök nodu
 
-[sub_resource type="TileSet" id="TileSet_6iyac"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_d1ilt")
+@onready var anim_sprite := $AnimatedSprite2D   # node’u hazır olunca yakala
+
+func _ready() -> void:
+	animation_sprite.play(\"idle\")                    # “idle” animasyonunu başlat
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6iyac"]
 radius = 19.0263
@@ -1556,12 +1456,7 @@ position = Vector2(-1, 0)
 tile_map_data = PackedByteArray("AAAKAPj/AQAMABAAAAAKAPn/AQAMABEAAAAKAPr/AQAMABIAAAAKAPv/AQAMABMAAAAKAPz/AQAMABQAAAAKAP3/AQAMABUAAAAKAP7/AQAMABYAAAAKAP//AQAMABcAAAALAPj/AQANABAAAAALAPn/AQANABEAAAALAPr/AQANABIAAAALAPv/AQANABMAAAALAPz/AQANABQAAAALAP3/AQANABUAAAALAP7/AQANABYAAAALAP//AQANABcAAAAMAPj/AQAOABAAAAAMAPn/AQAOABEAAAAMAPr/AQAOABIAAAAMAPv/AQAOABMAAAAMAPz/AQAOABQAAAAMAP3/AQAOABUAAAAMAP7/AQAOABYAAAAMAP//AQAOABcAAAANAPj/AQAPABAAAAANAPn/AQAPABEAAAANAPr/AQAPABIAAAANAPv/AQAPABMAAAANAPz/AQAPABQAAAANAP3/AQAPABUAAAANAP7/AQAPABYAAAANAP//AQAPABcAAAAQAP7/AQAMABAAAAAQAP//AQAMABEAAAAQAAAAAQAMABIAAAAQAAEAAQAMABMAAAAQAAIAAQAMABQAAAAQAAMAAQAMABUAAAAQAAQAAQAMABYAAAAQAAUAAQAMABcAAAARAP7/AQANABAAAAARAP//AQANABEAAAARAAAAAQANABIAAAARAAEAAQANABMAAAARAAIAAQANABQAAAARAAMAAQANABUAAAARAAQAAQANABYAAAARAAUAAQANABcAAAASAP7/AQAOABAAAAASAP//AQAOABEAAAASAAAAAQAOABIAAAASAAEAAQAOABMAAAASAAIAAQAOABQAAAASAAMAAQAOABUAAAASAAQAAQAOABYAAAASAAUAAQAOABcAAAATAP7/AQAPABAAAAATAP//AQAPABEAAAATAAAAAQAPABIAAAATAAEAAQAPABMAAAATAAIAAQAPABQAAAATAAMAAQAPABUAAAATAAQAAQAPABYAAAATAAUAAQAPABcAAAA=")
 tile_set = SubResource("TileSet_jjvhh")
 
-[node name="House" type="TileMapLayer" parent="World"]
-tile_map_data = PackedByteArray("AAD5//n/AAAAAAQAAAD5//r/AAAAAAUAAAD5//v/AAAAAAYAAAD5//z/AAAAAAcAAAD5//3/AAAAAAgAAAD5//7/AAAAAAkAAAD5////AAAAAAoAAAD6//j/AAABAAMAAAD6//n/AAABAAQAAAD6//r/AAABAAUAAAD6//v/AAABAAYAAAD6//z/AAABAAcAAAD6//3/AAABAAgAAAD6//7/AAABAAkAAAD6////AAABAAoAAAD7//f/AAACAAIAAAD7//j/AAACAAMAAAD7//n/AAACAAQAAAD7//r/AAACAAUAAAD7//v/AAACAAYAAAD7//z/AAACAAcAAAD7//3/AAACAAgAAAD7//7/AAACAAkAAAD7////AAACAAoAAAD8//b/AAADAAEAAAD8//f/AAADAAIAAAD8//j/AAADAAMAAAD8//n/AAADAAQAAAD8//r/AAADAAUAAAD8//v/AAADAAYAAAD8//z/AAADAAcAAAD8//3/AAADAAgAAAD8//7/AAADAAkAAAD8////AAADAAoAAAD9//b/AAAEAAEAAAD9//f/AAAEAAIAAAD9//j/AAAEAAMAAAD9//n/AAAEAAQAAAD9//r/AAAEAAUAAAD9//v/AAAEAAYAAAD9//z/AAAEAAcAAAD9//3/AAAEAAgAAAD9//7/AAAEAAkAAAD9////AAAEAAoAAAD+//f/AAAFAAIAAAD+//j/AAAFAAMAAAD+//n/AAAFAAQAAAD+//r/AAAFAAUAAAD+//v/AAAFAAYAAAD+//z/AAAFAAcAAAD+//3/AAAFAAgAAAD+//7/AAAFAAkAAAD+////AAAFAAoAAAD///j/AAAGAAMAAAD///n/AAAGAAQAAAD///r/AAAGAAUAAAD///v/AAAGAAYAAAD///z/AAAGAAcAAAD///3/AAAGAAgAAAD///7/AAAGAAkAAAD/////AAAGAAoAAAAAAPn/AAAHAAQAAAAAAPr/AAAHAAUAAAAAAPv/AAAHAAYAAAAAAPz/AAAHAAcAAAAAAP3/AAAHAAgAAAAAAP7/AAAHAAkAAAAAAP//AAAHAAoAAAA=")
-tile_set = SubResource("TileSet_6iyac")
-
 [node name="Player" parent="." instance=ExtResource("3_8gbba")]
-z_index = 1
 position = Vector2(41, -4)
 script = ExtResource("4_jjvhh")
 SPEED = 300
@@ -1575,6 +1470,7 @@ script = ExtResource("6_6bp64")
 
 [node name="Melanie" parent="." instance=ExtResource("7_ynf5e")]
 position = Vector2(103, -84)
+script = SubResource("GDScript_ynf5e")
 
 [node name="Actionables" parent="Melanie" instance=ExtResource("8_hptm8")]
 dialogue_resource = ExtResource("9_d1ilt")
